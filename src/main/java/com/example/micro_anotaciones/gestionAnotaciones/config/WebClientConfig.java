@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
     @Bean
-    public WebClient webClient() {
-        return WebClient.builder().baseUrl("http://localhost:5005/anotaciones.html") .build();
+    public WebClient estudiantesWebClient() {
+        return WebClient.builder().baseUrl("http://localhost:5002").build();
     }
 }
