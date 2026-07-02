@@ -11,6 +11,7 @@ public class Anotacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_anotacion")
     private Integer id;
 
     @Column(name = "id_estudiante", nullable = false)
