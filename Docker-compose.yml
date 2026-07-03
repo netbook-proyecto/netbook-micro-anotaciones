@@ -1,0 +1,22 @@
+services:
+  micro-anotaciones:
+    build: .
+    container_name: micro-anotaciones
+    restart: unless-stopped
+    ports:
+      - "5005:5005"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/micro_anotaciones?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: micro_anotaciones
+      SPRING_DATASOURCE_PASSWORD: anotaciones.2026@
+      APP_ESTUDIANTES_BASE_URL: http://micro-estudiantes:5002/api
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - red-microservicios
+
+networks:
+  red-microservicios:
+    external: true
+
+#HOLA
