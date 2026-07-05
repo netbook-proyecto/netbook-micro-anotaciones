@@ -12,4 +12,3 @@ COPY --from=build /app/target/netbook-micro-anotaciones-0.0.1-SNAPSHOT.jar app.j
 EXPOSE 5005
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-#HOLA
